@@ -1,0 +1,58 @@
+<h3>Decks</h3>
+
+<a href="/decks/novo" class="btn btn-primary">Novo</a>
+
+<table class="table" id="decks">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome do Deck</th>
+            <th>Modalidade</th>
+            <th>Arquetipo</th>
+            <th>Commander</th>
+            <th>Companion</th>
+            <th>Lista de cartas</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each listadecks}}
+        <tr> <!-- Table ROW --> 
+            <td>{{this.id}}</td> <!-- Table DATA --> 
+            <td>{{this.nomedeck}}</td>
+            <td>{{this.modalidade}}</td>
+            <td>{{this.arquetipo}}</td>
+            <td>{{this.commander}}</td>
+            <td>{{this.companion}}</td>
+            <td>
+                <a href="/decks/alterar/{{this.id}}" class="btn btn-primary">Visualizar</a>
+                <button class="btn btn-danger js-delete" data-id="{{this.id}}">
+                    X
+                </button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir deck</h5>
+      </div>
+      <div class="modal-body">
+        <p>Confirma a exclusão do deck?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnsim">Sim</button>
+        <button type="button" class="btn btn-secondary" id="btncancelar" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/public/site.js"></script>
+

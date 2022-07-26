@@ -1,0 +1,25 @@
+body {
+    background: rgba(231, 231, 231, 0.671);
+}
+.navbar {
+    background: #10454F;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.288);
+    margin-bottom: 2em;
+}
+.nav-link {
+    color: #BDE038;
+    font-size: 2em;
+}
+.nav-link:hover {
+    font-weight: 600;
+    color: #A3AB78;
+}
+.btn-primary {
+    background: #BDE038;
+    border-color: #10454F; 
+    color: #10454F;
+}
+.btn-primary:hover {
+    background: #A3AB78;
+
+}

@@ -1,0 +1,33 @@
+<form action="/decks/save" method="POST">
+
+    <input type="hidden" value="{{deck.id}}" name="id">
+    
+    <div class="form-group">
+        <label for="txtnomedeck">Nome do Deck:</label>
+        <input class="form-control" value="{{deck.nomedeck}}" type="text" id="txtnomedeck" name="nomedeck">
+    </div>
+    <div class="form-group">
+        <label for="txtmodalidade">Modalide:</label>
+        <input class="form-control" value="{{deck.modalidade}}" type="text" id="txtmodalidade" name="modalidade">
+
+    </div>
+    <div class="form-group">
+        <label for="txtarquetipo">Arquétipo:</label>
+        <input class="form-control" value="{{deck.arquetipo}}" type="text" id="txtarquetipo" name="arquetipo">
+    </div>
+    <div class="form-group">
+        <label for="txtcommander">Commander:</label>
+        <input class="form-control" value="{{deck.commander}}" type="text" id="txtcommander" name="commander">
+    </div>
+    
+    <div class="form-group">
+        <label for="txtcompanion">Companion:</label>
+        <input class="form-control" value="{{deck.companion}}" type="text" id="txtcompanion" name="companion">
+    </div>
+
+    <div class="form-group">
+        <label for="txtlistacartas">Lista de cartas:</label>
+        <input class="form-control" value="{{deck.listacartas}}" type="text" id="txtlistacartas" name="listacartas">
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
